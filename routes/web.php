@@ -57,3 +57,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     });
 });
+
+//login register routes for user biasa
+Route::get('/auth/register', [App\Http\Controllers\Auth\RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/auth/register', [App\Http\Controllers\Auth\RegisterController::class, 'register'])->name('register.submit');
+Route::post('/auth/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
+//login route for user biasa
+Route::get('/auth/login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/auth/login', [App\Http\Controllers\Auth\LoginController::class, 'login'])->name('login.submit');

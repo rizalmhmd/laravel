@@ -49,6 +49,19 @@
 
                     <div class="row">
                         <div class="col-12">
+                            <h5 class="border-bottom pb-2 mb-3">Alamat</h5>
+                            <div class="p-3 bg-light rounded">
+                                @if($aktivitas->alamat)
+                                    {!! nl2br(e($aktivitas->alamat)) !!}
+                                @else
+                                    <p class="text-muted fst-italic">Tidak ada alamat yang tersedia untuk aktivitas ini.</p>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
                             <h5 class="border-bottom pb-2 mb-3">Deskripsi Aktivitas</h5>
                             <div class="p-3 bg-light rounded">
                                 @if($aktivitas->deskripsi)

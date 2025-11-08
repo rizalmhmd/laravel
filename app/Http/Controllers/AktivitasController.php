@@ -36,7 +36,8 @@ class AktivitasController extends Controller
             'nama_aktivitas' => 'required|string|max:255',
             'deskripsi' => 'nullable|string',
             'tanggal' => 'nullable|date',
-            'status' => 'nullable|boolean'
+            'status' => 'nullable|boolean',
+            'alamat' => 'nullable|string',
         ]);
 
         Aktivitas::create($request->all());
@@ -65,7 +66,8 @@ class AktivitasController extends Controller
             'nama_aktivitas' => 'required|string|max:255',
             'deskripsi' => 'nullable|string',
             'tanggal' => 'nullable|date',
-            'status' => 'nullable|boolean'
+            'status' => 'nullable|boolean',
+            'alamat' => 'nullable|string'
         ]);
 
         $aktivitas = Aktivitas::findOrFail($id);
@@ -73,7 +75,8 @@ class AktivitasController extends Controller
             'nama_aktivitas' => $request->nama_aktivitas,
             'deskripsi' => $request->deskripsi,
             'tanggal' => $request->tanggal,
-            'status' => $request->status
+            'status' => $request->status,
+            'alamat' => $request->alamat,
         ]);
         return redirect()->route('aktivitas.index')->with('success', 'Aktivitas berhasil diperbarui.');
     }

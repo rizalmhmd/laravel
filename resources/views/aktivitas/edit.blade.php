@@ -26,6 +26,11 @@
                                    value="{{ old('nama_aktivitas', $aktivitas->nama_aktivitas) }}" required>
                         </div>
                         <div class="mb-3">
+                            <label for="alamat" class="form-label fw-bold">Alamat</label>
+                            <textarea class="form-control" 
+                                      id="alamat" name="alamat" rows="4">{{ old('alamat', $aktivitas->alamat) }}</textarea>
+                        </div>
+                        <div class="mb-3">
                             <label for="deskripsi" class="form-label fw-bold">Deskripsi</label>
                             <textarea class="form-control" 
                                       id="deskripsi" name="deskripsi" rows="4">{{ old('deskripsi', $aktivitas->deskripsi) }}</textarea>

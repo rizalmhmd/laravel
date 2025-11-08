@@ -23,6 +23,10 @@
                                 <textarea class="form-control" id="deskripsi" name="deskripsi" rows="4" required></textarea>
                             </div>
                             <div class="mb-3">
+                                <label for="alamat" class="form-label">Alamat</label>
+                                <textarea class="form-control" id="alamat" name="alamat" rows="4" required></textarea>
+                            </div>
+                            <div class="mb-3">
                                 <label for="tanggal" class="form-label">Tahun</label>
                                 <input type="date" class="form-control" id="tanggal" name="tanggal">
                             </div>

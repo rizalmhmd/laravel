@@ -37,6 +37,7 @@
                                     <p class="mb-1"><strong>Tanggal:</strong> 
                                         {{ \Carbon\Carbon::parse($activity->tanggal)->format('d F Y') }}
                                     </p>
+                                    <p class="mb-1"><strong>Alamat:</strong> {{ $activity->alamat }}</p>
                                     <p class="mb-1"><strong>Deskripsi:</strong> {{ $activity->deskripsi }}</p>
                                     <p class="mb-1"><strong>Status:</strong> 
                                         <span class="badge {{ $activity->status ? 'bg-success' : 'bg-warning' }}">
